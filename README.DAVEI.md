@@ -5,7 +5,7 @@
 For the coding challenge I decided to tackle the Customer Model enhancement. I liked this challenge because it covered a lot of different areas
 * New model associations and controllers
 * Session managements
-* Password security—those plaintext passwords really bothered me :)
+* Password security
 
 The guts of my implementation can be found in [pull request #1: Adding Customer model and session support](https://github.com/disaacs/portrait/pull/1). There are a lot of details in the PR, and I have not squashed any of my commits. I will not repeat those details here.
 

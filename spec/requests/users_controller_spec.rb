@@ -14,6 +14,12 @@ describe UsersController do
     expect(response).to be_successful
   end
 
+  it 'handles non-existent /users/:id with GET' do
+    get user_path(0)
+    expect(response).to redirect_to(users_path)
+    expect(flash[:error]).to be_present
+  end
+
   it 'handles different customer /users/:id with GET' do
     gt users(:different_admin)
     expect(response).to redirect_to(users_path)

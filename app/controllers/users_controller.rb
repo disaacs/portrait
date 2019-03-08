@@ -15,7 +15,8 @@ class UsersController < ApplicationController
   # GET /users/:id
   def show
     @user = User.find_by! name: params[:id], customer: @current_customer
-  rescue
+  rescue ActiveRecord::RecordNotFound
+    flash[:error] = "User not found."
     redirect_to users_url
   end
 
